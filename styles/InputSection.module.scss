@@ -1,0 +1,30 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+
+.container {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+.childContainer {
+  margin-top: 8px;
+}
+
+@include media-breakpoint-only(xs) {
+  .container {
+    &:not(.active) {
+      .childContainer {
+        display: none;
+      }
+    }
+  }
+
+  .label {
+    cursor: pointer;
+  }
+}
